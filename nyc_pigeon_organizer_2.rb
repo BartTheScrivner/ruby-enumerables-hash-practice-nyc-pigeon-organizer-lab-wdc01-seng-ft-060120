@@ -1,23 +1,15 @@
 require 'pry'
 def nyc_pigeon_organizer(data)
-
-  name_list = []
-  trait_list = []
- 
-  data.each_pair do |(trait, category_hash)|
-    category_hash.each_pair do |(quality, names)|
+  name_hash = data.reduce({}) do |memo, (trait, category_hash)|
+    category_hash.each_pair do |quality, names|
       names.count do |name|
-        
-        name_list.push(name) unless name_list.include?(name)
+        memo[name] unless memo.include?(name)
+        memo
       end
-      name_list
+      binding.pry
+      name_hash
     end
-    name_list
   end
-  
-  name_hash = Hash[name_list.collect { |name| [name, {}] } ]
- 
-  
 end
 
 pigeon_data = {
