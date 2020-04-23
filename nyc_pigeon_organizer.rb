@@ -12,6 +12,8 @@ def nyc_pigeon_organizer(data)
         end
         if pigeon_hash[name][trait] === nil
           pigeon_hash[name][trait] = []
+        end
+        
       end
       #return the list
       name_list
