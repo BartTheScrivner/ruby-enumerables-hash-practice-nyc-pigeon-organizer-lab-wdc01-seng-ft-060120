@@ -5,8 +5,9 @@ def nyc_pigeon_organizer(data)
       names.count do |name|
         memo[name] unless memo.include?(name)
         memo
+        binding.pry
       end
-      binding.pry
+      
       name_hash
     end
   end
