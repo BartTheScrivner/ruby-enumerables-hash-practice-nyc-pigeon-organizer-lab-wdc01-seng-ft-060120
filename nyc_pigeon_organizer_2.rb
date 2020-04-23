@@ -6,9 +6,10 @@ def nyc_pigeon_organizer(data)
         memo[name] unless memo.include?(name)
         memo
       end
+      memo
       binding.pry
-      name_hash
     end
+    
     binding.pry
   end
   binding.pry
