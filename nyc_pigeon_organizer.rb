@@ -15,8 +15,6 @@ def nyc_pigeon_organizer(data)
         end
         pigeon_hash[name][trait].push(quality.to_s)
       end
-      #return the hash
-      pigeon_hash
     end
   end
 end
