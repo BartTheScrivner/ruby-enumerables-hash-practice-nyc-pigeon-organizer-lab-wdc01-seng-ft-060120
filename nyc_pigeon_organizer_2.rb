@@ -1,6 +1,22 @@
 require 'pry'
 def nyc_pigeon_organizer(data)
   name_hash = data.reduce({}) do |memo, (trait, category_hash)| 
+    category_hash.each_pair do |(quality, names)|
+      names.count do |name|
+        if memo[name] === nil
+          memo[name] = {}
+        end
+        if memo[name][trait] === nil
+          memo[name][trait] = []
+        end
+        memo[name][trait].push(quality.to_s)
+      end
+    end
+    memo
+  end
+  binding.pry
+  name_hash
+end
   
 end
 
