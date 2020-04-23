@@ -7,8 +7,7 @@ def nyc_pigeon_organizer(data)
   data.each_pair do |(trait, category_hash)|
     category_hash.each_pair do |(quality, names)|
       names.count do |name|
-        #prevent dulicates of names mentioned more than once
-        name_list.push(name) unless name_list.include?(name)
+        
       end
       #return the list
       name_list
