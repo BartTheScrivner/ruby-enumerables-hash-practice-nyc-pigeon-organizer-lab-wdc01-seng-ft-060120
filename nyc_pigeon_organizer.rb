@@ -7,11 +7,11 @@ def nyc_pigeon_organizer(data)
   data.each_pair do |(trait, category_hash)|
     category_hash.each_pair do |(quality, names)|
       names.count do |name|
-        if pigeon_hash[name] === nil
-          pigeon_hash[name] = {}
+        if name_hash[name] === nil
+          name_hash[name] = {}
         end
-        if pigeon_hash[name][trait] === nil
-          pigeon_hash[name][trait] = []
+        if name_hash[name][trait] === nil
+          name_hash[name][trait] = []
         end
         pigeon_hash[name][trait].push(quality.to_s)
       end
