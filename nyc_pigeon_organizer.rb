@@ -2,7 +2,7 @@ require 'pry'
 def nyc_pigeon_organizer(data)
   # write your code here!
   #Create a hash for the pigeon names
-  pigeon_hash = {}
+  name_hash = {}
   #iterate over the entire hash, extracting names and adding them to the above hash.
   data.each_pair do |(trait, category_hash)|
     category_hash.each_pair do |(quality, names)|
