@@ -7,10 +7,8 @@ def nyc_pigeon_organizer(data)
         memo
       end
       memo
-      binding.pry
     end
-    
-    binding.pry
+    memo
   end
   name_hash
   binding.pry
