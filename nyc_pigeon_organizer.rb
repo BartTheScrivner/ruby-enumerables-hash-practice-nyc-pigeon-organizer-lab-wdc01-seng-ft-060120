@@ -9,6 +9,9 @@ def nyc_pigeon_organizer(data)
       names.count do |name|
         if pigeon_hash[name] === nil
           pigeon_hash[name] = {}
+        end
+        if pigeon_hash[name][trait] === nil
+          pigeon_hash[name][trait] = []
       end
       #return the list
       name_list
