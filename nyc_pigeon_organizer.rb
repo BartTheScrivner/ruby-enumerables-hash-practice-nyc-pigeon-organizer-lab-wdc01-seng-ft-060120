@@ -13,11 +13,11 @@ def nyc_pigeon_organizer(data)
         if name_hash[name][trait] === nil
           name_hash[name][trait] = []
         end
-        pigeon_hash[name][trait].push(quality.to_s)
+        name_hash[name][trait].push(quality.to_s)
       end
     end
   end
-  pigeon_hash
+  name_hash
 end
 
 pigeon_data = {
