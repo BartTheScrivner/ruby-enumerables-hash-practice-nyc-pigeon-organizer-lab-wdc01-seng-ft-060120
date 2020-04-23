@@ -16,27 +16,6 @@ def nyc_pigeon_organizer(data)
     end
     name_list
   end
-  #convert the name list to a hash
-  name_hash = Hash[name_list.collect { |name| [name, {}] } ]
-  #iterate over the raw hash again to extract traits
-  data.each_pair {|(trait, category_hash)| trait_list.push(trait) }
-  #convert the trait list to a hash
-  trait_hash = Hash[trait_list.collect { |trait| [ trait, [] ] } ]
-  #combine name and trait hashes
-  combined_hash = name_hash.each_pair { |(name, traits)| name_hash[name] = trait_hash }
-  combined_hash.each_pair do |(key, value)|
-    data.each_pair do |(trait, category_hash)|
-      category_hash.each_pair do |(quality, names)|
-        if names.include?(key)
-          value[trait].push(quality.to_s) unless value[trait].include?(quality.to_s)
-        end
-        combined_hash
-      end
-      combined_hash
-    end
-    combined_hash
-  end
-  combined_hash
 end
 
 pigeon_data = {
