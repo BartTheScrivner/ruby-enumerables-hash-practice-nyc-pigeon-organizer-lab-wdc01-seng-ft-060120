@@ -1,10 +1,9 @@
 require 'pry'
 def nyc_pigeon_organizer(data)
   # write your code here!
-  #Create a list for the pigeon names
-  name_list = []
-  trait_list = []
-  #iterate over the entire array, extracting names and adding them to the above list.
+  #Create a hash for the pigeon names
+  pigeon_hash = {}
+  #iterate over the entire hash, extracting names and adding them to the above hash.
   data.each_pair do |(trait, category_hash)|
     category_hash.each_pair do |(quality, names)|
       names.count do |name|
