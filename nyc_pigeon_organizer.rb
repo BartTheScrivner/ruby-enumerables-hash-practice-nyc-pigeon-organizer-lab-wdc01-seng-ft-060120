@@ -8,6 +8,7 @@ def nyc_pigeon_organizer(data)
     category_hash.each_pair do |(quality, names)|
       names.count do |name|
         if pigeon_hash[name] === nil
+          pigeon_hash[name] = {}
       end
       #return the list
       name_list
