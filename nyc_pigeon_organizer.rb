@@ -1,23 +1,19 @@
 require 'pry'
 def nyc_pigeon_organizer(data)
-  # write your code here!
-  #Create a hash for the pigeon names
-  name_hash = {}
-  #iterate over the entire hash, extracting names and adding them to the above hash.
-  data.each_pair do |(trait, category_hash)|
+  name_hash = data.reduce({}) do |memo, (trait, category_hash)| 
     category_hash.each_pair do |(quality, names)|
       names.count do |name|
-        if name_hash[name] === nil
-          name_hash[name] = {}
+        if memo[name] === nil
+          memo[name] = {}
         end
-        if name_hash[name][trait] === nil
-          name_hash[name][trait] = []
+        if memo[name][trait] === nil
+          memo[name][trait] = []
         end
-        name_hash[name][trait].push(quality.to_s)
+        memo[name][trait].push(quality.to_s)
       end
     end
+    memo
   end
-  binding.pry
   name_hash
 end
 
