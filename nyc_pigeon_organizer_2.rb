@@ -1,6 +1,6 @@
 require 'pry'
 def nyc_pigeon_organizer(data)
-  name_hash = data.reduce({}) { |memo, (trait, category_hash)| 
+  name_hash = data.reduce({}) do |memo, (trait, category_hash)| 
   
 end
 
