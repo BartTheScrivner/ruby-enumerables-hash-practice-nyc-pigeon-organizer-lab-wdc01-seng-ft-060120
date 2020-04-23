@@ -7,11 +7,14 @@ def nyc_pigeon_organizer(data)
         memo
         binding.pry
       end
-      
+      binding.pry
       name_hash
     end
+    binding.pry
   end
+  binding.pry
 end
+binding.pry
 
 pigeon_data = {
   :color => {
