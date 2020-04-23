@@ -4,7 +4,6 @@ def nyc_pigeon_organizer(data)
     category_hash.each_pair do |quality, names|
       names.count do |name|
         memo[name] unless memo.include?(name)
-        binding.pry
         memo
       end
       binding.pry
