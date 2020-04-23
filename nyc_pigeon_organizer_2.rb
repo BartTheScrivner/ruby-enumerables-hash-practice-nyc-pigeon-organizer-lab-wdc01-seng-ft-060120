@@ -17,8 +17,6 @@ def nyc_pigeon_organizer(data)
   binding.pry
   name_hash
 end
-  
-end
 
 
 pigeon_data = {
